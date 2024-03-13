@@ -29,6 +29,8 @@ public class Concave : MonoBehaviour
     public GameObject settingPnl;
     public Button gameStartBtn;
 
+    public GameObject gameRuleSetPnl;
+
     public int streamerTurnTime = 15;
     public int userTurnTime = 15;
 
@@ -45,6 +47,7 @@ public class Concave : MonoBehaviour
     {
         chzzkChatVote = GameObject.FindObjectOfType<ChzzkChatVote>();
         gameStartBtn.interactable = false;
+        gameRuleSetPnl.SetActive(false);
 
         timeTexts[0].text = streamerTurnTime.ToString();
         timeTexts[1].text = userTurnTime.ToString();
@@ -68,14 +71,21 @@ public class Concave : MonoBehaviour
             PlaceStone();
         }
     }
+    public void SettingPnlOpen()
+    {
+        settingPnl.SetActive(false);
+        gameRuleSetPnl.SetActive(true);
+    }
     void GameStart()
     {
 
         CreateBoard();
         settingPnl.SetActive(false);
+        gameRuleSetPnl.SetActive(false);
         if (isStreamerTurn)
             StartCoroutine( chzzkChatVote.TimerUpdate(streamerTurnTime));
-        //StartCoroutine(chzzkChatVote.VoteStart());
+        else
+            StartCoroutine(chzzkChatVote.VoteStart());
     }
     void CreateBoard()
     {
@@ -283,12 +293,13 @@ public class Concave : MonoBehaviour
 
     public void ChangeCellColor()
     {
-        isBlackTurn = !isBlackTurn;
+        //isBlackTurn = !isBlackTurn;
+        isStreamerTurn = !isStreamerTurn;
         SetChangeImage();
     }
     void SetChangeImage()
     {
-        if (isBlackTurn)
+        if (isStreamerTurn)
         {
             cellColorImgs[0].color = new Color(0, 0, 0);
             cellColorImgs[1].color = new Color(1, 1, 1);

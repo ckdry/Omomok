@@ -86,7 +86,7 @@ public class ChzzkUnity : MonoBehaviour
                 chatText += "<#000000>" + profile.nickname + ": </color>" + str + "\n";
                 
                 int lineCount = chatText.Split('\n').Length;
-                if (lineCount>15)
+                if (lineCount>20)
                     chatText = chatText.Substring(chatText.IndexOf("\n") + 1);
 
                 ChatText(chatText);
@@ -197,6 +197,7 @@ public class ChzzkUnity : MonoBehaviour
                 socket.Connect();
 
                 concaveGame.gameStartBtn.interactable = true;
+                concaveGame.SettingPnlOpen();
             }
             else
             {
@@ -265,10 +266,10 @@ public class ChzzkUnity : MonoBehaviour
                     JObject bdyObject = (JObject)bdy[0];
 
                     string profileText = bdyObject["profile"].ToString();
-                    profileText = profileText.Replace("\\", "");
-                    Debug.Log(profileText);                                      
+                    profileText = profileText.Replace("\\", "");                        
                     Profile profile = JsonUtility.FromJson<Profile>(profileText);
 
+                    Debug.Log(profile.nickname + " : " + bdyObject["msg"].ToString());              
                     //debugText.Append($"{profile.nickname}({profile.userIdHash}) : {bdyObject["msg"]}\n");
                     onMessage(profile, bdyObject["msg"].ToString());
 
