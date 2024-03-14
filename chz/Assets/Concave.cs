@@ -11,6 +11,8 @@ public class Concave : MonoBehaviour
     public GameObject blackStonePrefab;
     public GameObject whiteStonePrefab;
 
+    [SerializeField]
+    private ConcaveCell[] cellpos;
     public GameObject[,] cells;
     private GameObject currentStone;
     public bool isBlackTurn = true;
@@ -28,6 +30,7 @@ public class Concave : MonoBehaviour
 
     public GameObject settingPnl;
     public Button gameStartBtn;
+    public GameObject gameBoard;
 
     public GameObject gameRuleSetPnl;
 
@@ -48,6 +51,12 @@ public class Concave : MonoBehaviour
         chzzkChatVote = GameObject.FindObjectOfType<ChzzkChatVote>();
         gameStartBtn.interactable = false;
         gameRuleSetPnl.SetActive(false);
+        gameBoard.SetActive(false);
+        cells = new GameObject[boardSize, boardSize];
+        foreach (var cell in cellpos)
+        {
+            cells[cell.rowPosition, cell.colPosition] = cell.gameObject;
+        }
 
         timeTexts[0].text = streamerTurnTime.ToString();
         timeTexts[1].text = userTurnTime.ToString();
@@ -79,9 +88,10 @@ public class Concave : MonoBehaviour
     void GameStart()
     {
 
-        CreateBoard();
+        //CreateBoard();
         settingPnl.SetActive(false);
         gameRuleSetPnl.SetActive(false);
+        gameBoard.SetActive(true);
         if (isStreamerTurn)
             StartCoroutine( chzzkChatVote.TimerUpdate(streamerTurnTime));
         else
@@ -89,7 +99,6 @@ public class Concave : MonoBehaviour
     }
     void CreateBoard()
     {
-        cells = new GameObject[boardSize, boardSize];
 
         float cellSize = omokCellPrefab.GetComponent<SpriteRenderer>().bounds.size.x;
 
