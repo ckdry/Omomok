@@ -82,6 +82,8 @@ public class Concave : MonoBehaviour
     }
     public void SettingPnlOpen()
     {
+
+        gameBoard.SetActive(false);
         settingPnl.SetActive(false);
         gameRuleSetPnl.SetActive(true);
     }
@@ -92,6 +94,8 @@ public class Concave : MonoBehaviour
         settingPnl.SetActive(false);
         gameRuleSetPnl.SetActive(false);
         gameBoard.SetActive(true);
+
+        isBlackTurn = true;
         if (isStreamerTurn)
             StartCoroutine( chzzkChatVote.TimerUpdate(streamerTurnTime));
         else
@@ -139,9 +143,7 @@ public class Concave : MonoBehaviour
 
                 if (CheckWinCondition(cell.rowPosition, cell.colPosition, isBlackTurn))
                 {
-                    Debug.Log(isBlackTurn ? "Black Player Wins!" : "White Player Wins!");
-                    chzzkChatVote.StopAllCoroutines();
-                    StopAllCoroutines();
+                    GameEnd();
                 }
 
                 isBlackTurn = !isBlackTurn;
@@ -161,13 +163,19 @@ public class Concave : MonoBehaviour
         isStreamerTurn = !isStreamerTurn;
         if (CheckWinCondition(row, col, isBlackTurn))
         {
-            Debug.Log(isBlackTurn ? "Black Player Wins!" : "White Player Wins!");
+            GameEnd();
         }
 
         isBlackTurn = !isBlackTurn;
 
     }
-
+    void GameEnd()
+    {
+        Debug.Log(isBlackTurn ? "Black Player Wins!" : "White Player Wins!");
+        chzzkChatVote.StopAllCoroutines();
+        StopAllCoroutines();
+        SettingPnlOpen();
+    }
     
 
     bool CheckWinCondition(int x, int y, bool isBlack)
@@ -320,8 +328,4 @@ public class Concave : MonoBehaviour
         }
     }
 
-    void GameEnd()
-    {
-
-    }
 }

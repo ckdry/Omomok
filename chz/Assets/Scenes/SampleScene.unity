@@ -10169,7 +10169,7 @@ MonoBehaviour:
   m_CaretColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   m_CustomCaretColor: 0
   m_SelectionColor: {r: 0.65882355, g: 0.80784315, b: 1, a: 0.7529412}
-  m_Text: 32fb866e323242b770cdc790f991a6f6
+  m_Text: 1902f596d555e3efb0cfba97f82d6877
   m_CaretBlinkRate: 0.85
   m_CaretWidth: 1
   m_ReadOnly: 0
@@ -14913,7 +14913,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "32fb866e323242b770cdc790f991a6f6\u200B"
+  m_text: "1902f596d555e3efb0cfba97f82d6877\u200B"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e96e35aa4f45689479d2a5b744ca5e95, type: 2}
   m_sharedMaterial: {fileID: 1554977084603238410, guid: e96e35aa4f45689479d2a5b744ca5e95, type: 2}
@@ -25511,12 +25511,12 @@ MonoBehaviour:
       m_Calls: []
   m_text: "1. \uC544\uB798\uC758 \uAC8C\uC784\uACFC \uAD00\uB828\uB41C \uC124\uC815\uC744
     \uD574\uC8FC\uC138\uC694\n2. \uC815\uD655\uD55C \uC88C\uD45C\uC758 \uCC44\uD305\uB9CC\uC774
-    \uC9D1\uACC4\uAC00 \uB429\uB2C8\uB2E4.\n \uC633\uC740  \uC608) A4, e10, h9\n
-    \uB098\uC05C \uC608) A5 \u3131\u3131 , 5a, !J4\n3. \uC6B0\uCE21 \uC0C1\uB2E8\uC758
-    \uC2DC\uCCAD\uC790 \uAD6C\uC5ED \uD074\uB9AD \uC2DC \uC774\uBBF8\uC9C0 \uBC0F
-    \uC774\uB984\uC744 \uBCC0\uACBD\uD560 \uC218 \uC788\uC2B5\uB2C8\uB2E4.\n4. \uC2DC\uAC04
-    \uB0B4\uC5D0 \uD22C\uD45C\uD558\uC9C0 \uC54A\uC744 \uC2DC \uC790\uB3D9\uC73C\uB85C
-    \uB118\uC5B4\uAC00\uAC8C \uB429\uB2C8\uB2E4."
+    \uC9D1\uACC4\uAC00 \uB429\uB2C8\uB2E4.\n \uC633\uC740  \uC608) A4, e10, h9\n\uB098\uC05C
+    \uC608) A5 \u3131\u3131 , 5a, !J4\n3. \uC6B0\uCE21 \uC0C1\uB2E8\uC758 \uC2DC\uCCAD\uC790
+    \uAD6C\uC5ED \uD074\uB9AD \uC2DC \uC774\uBBF8\uC9C0 \uBC0F \uC774\uB984\uC744
+    \uBCC0\uACBD\uD560 \uC218 \uC788\uC2B5\uB2C8\uB2E4.\n4. \uC2DC\uAC04 \uB0B4\uC5D0
+    \uD22C\uD45C\uD558\uC9C0 \uC54A\uC744 \uC2DC \uC790\uB3D9\uC73C\uB85C \uB118\uC5B4\uAC00\uAC8C
+    \uB429\uB2C8\uB2E4."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e96e35aa4f45689479d2a5b744ca5e95, type: 2}
   m_sharedMaterial: {fileID: 1554977084603238410, guid: e96e35aa4f45689479d2a5b744ca5e95, type: 2}
