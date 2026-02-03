@@ -20,3 +20,4 @@
 - 오목룰에 따라 이어진 5개의 같은색 돌 연결 시 승리
 
 ![ChzzkChatConCaveGame](https://github.com/ckdry/Omomok/assets/113496043/84c17a91-34b7-4ab4-abe4-4d6cef3470ac)
+- 이미지 클릭 시 gif가 재생됩니다.
